@@ -9,21 +9,23 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.Vector;
-import javax.swing.Jpanel;
+import javax.swing.JPanel;
 
 /**
  *
  * @author marcelino
  */
-public class Lienzo extends Jpanel implements MouseListener {
+public class Lienzo extends JPanel implements MouseListener {
 
     private Vector<Nodo> vectorNodos;
     
     public Lienzo (){
         this.vectorNodos = new Vector<>();
         this.addMouseListener(this);
+       
     }
     
+    @Override
     public void paint (Graphics g){
         for(Nodo nodos : vectorNodos){
             nodos.pintar(g);
