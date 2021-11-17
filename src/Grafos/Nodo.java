@@ -40,6 +40,10 @@ public class Nodo {
    public void setY(int y){
        this.y = y;
    }
+
+    String getNombre() {
+       return nombre;
+    }
    
    
 }
